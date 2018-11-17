@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+- '6'
+after_success: npm run coverage
+deploy:
+  provider: npm
+  email: fptavares@gmail.com
+  api_key:
+    secure: jhkLbsFs+5DvbGEHs4wBSJQYR75abC94lduWJjsVb68lort/BgKEthMkwxp0bLkbhho3ifm0JpsaKVbL+LX2ZQgNhxQsw8vyfMqoeBZvH9gbihNaofARdLm5RxyySFJMrK40U3compgm1khps8oHk2Ygs0J4Zmr/kVn+RAWS3wNVLJsCErCGx92y/ftExDtBRX2IPImR/LAJwr9qM84C6Tw/YNrMUoxBeXqwle1tYiy0o2EkZW6mrEC8gho82LBxkk0n6f/KuUxb7EOTaAy0++QrU+/ORG4+wBR1py41xcyk9vz1EUYDsg3x7P+3ElM4Dm4lwcrIyFI194De4lbe/q+dOtid3Kw7g3D5bLHqKTxhbCKcgZsP4t4N9gHxqjtmEa+ujzKRemCx9PFeCqQYXpOz3NGBt4/9Z1wlz9ExfUh3k9M2P38azdQ4altTFHmCROdscSVXeCgkF7i4c1QvMavpPaXpBh+gH21PCmDbnre7E7+ynHNG7aeLe+4+LqhdtAmA8ywQlVe7heyfrc+VJmELs3EVZ5qu0F0ZfDwD65oTyZj7oLkQxCj2/EbkGuEa2fKFWOc11cO3BSWDVFTUrEGPrO1C8SWF9sg7LXOUQUtN/nd3O3Mon49UdBfzIxku4ueKgEoO01+K/pRmff/7jSiYV8yJ+wnEKTqfeY5DIgU=
+  on:
+    tags: true
+    repo: modofunjs/modofun
+branches:
+  except:
+  - docs
